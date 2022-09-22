@@ -21,8 +21,10 @@ setInterval(() => {
   if (sec < 10) {
     sec = "0" + sec;
   }
-
-  if (hrs >= 12) {
+  if (hrs == 0) {
+    hrs = 12;
+  }
+  if (hrs < 12) {
     AMPM.innerHTML = "PM";
   } else {
     AMPM.innerHTML = "AM";
